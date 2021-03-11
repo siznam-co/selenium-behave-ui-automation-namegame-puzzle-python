@@ -1,0 +1,30 @@
+<testsuite name="smoke_tests.smoke_e2e.BrandRange" tests="1" errors="1" failures="0" skipped="0" time="1.6395" timestamp="2021-03-11T20:34:51.101165" hostname="DESKTOP-OR7ANCS"><testcase classname="smoke_tests.smoke_e2e.BrandRange" name="Sign In" status="failed" time="1.6395"><error type="TypeError" message="can only concatenate str (not &quot;int&quot;) to str">
+<![CDATA[
+Failing step: And the user chooses a random person. ... failed in 0.012s
+Location: features/smoke_tests/smoke_e2e.feature:6
+Traceback (most recent call last):
+  File "c:\users\qa\appdata\local\programs\python\python39\lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "c:\users\qa\appdata\local\programs\python\python39\lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features\steps\smoke_e2e_steps.py", line 15, in step_impl
+    NameGame(context).click_random_person()
+  File "D:\Automation\Selenium with Python\namegame-behave\pageobjects\NameGame.py", line 35, in click_random_person
+    rnd_locator_person = './/div[@class = "photo"][' + random_number + ']'
+TypeError: can only concatenate str (not "int") to str
+]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+
+  @smoke_test
+  Scenario: Sign In
+    Given User is on "Home" page. ... passed in 1.628s
+    And the user chooses a random person. ... failed in 0.012s
+    When the chosen person is "correct", the user is moved to next screen to choose "next person", and the "tries", "correct" & "streak" increases. ... undefined in 0.000s
+    When the chosen person is "incorrect", the "tries" increases & "streak" sets to "zero" and the user has to choose again. ... undefined in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
