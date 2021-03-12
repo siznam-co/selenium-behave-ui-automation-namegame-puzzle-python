@@ -1,4 +1,4 @@
-Feature: BrandRange
+Feature: NameGame
 
   @smoke_test
   Scenario: Sign In
